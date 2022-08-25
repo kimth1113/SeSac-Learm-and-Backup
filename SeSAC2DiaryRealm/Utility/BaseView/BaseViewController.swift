@@ -12,12 +12,15 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        setConstraints()
     }
     
     
     func configure() {}
     
-    func showAlertMessage(title: String, button: String) {
+    func setConstraints() {}
+    
+    func showAlertMessage(title: String, button: String = "확인") {
         let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
         let ok = UIAlertAction(title: button, style: .default)
         alert.addAction(ok)

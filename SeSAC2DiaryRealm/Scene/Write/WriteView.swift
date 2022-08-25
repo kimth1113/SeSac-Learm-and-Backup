@@ -11,6 +11,7 @@ class WriteView: BaseView {
    
     let userImageView: DiaryImageView = {
         let view = DiaryImageView(frame: .zero)
+        view.layer.masksToBounds = true
         return view
     }()
     
